@@ -7,6 +7,7 @@
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Macondo', cursive;
     --primary-color: #5D4037; /* Dark brown */
+    --highlight-color: #003366; /* Blue */
 }
 
 /* Global Styles */
@@ -17,10 +18,11 @@ body {
 h1, h2, h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
+    text-transform: uppercase;
 }
 
 .sub-heading-color {
-    color: var(--primary-color);
+    color: var(--highlight-color);
 }
 
 /* Navbar Styles */
@@ -32,6 +34,10 @@ h1, h2, h3 {
 
 }
 
+/* Header Styles */
+#header .lead {
+    font-family: var(--secondary-font);
+}
 /* grid visualtization CSS for testing */
 /* .container, 
 .row {
@@ -43,6 +49,17 @@ h1, h2, h3 {
     background-color: whitesmoke;
 } */
 
-p{
-  border: 2px solid var(--primary-color);   
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+
+#home-header .lead {
+    font-family: var(--secondary-font, "Montserrat"), sans-serif;
 }
