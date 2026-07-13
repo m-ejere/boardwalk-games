@@ -1,13 +1,18 @@
 /* Single import link carrying both fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Macondo&display=swap');
 
-
 /* CSS Variables */
 :root {
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Macondo', cursive;
-    --primary-color: #5D4037; /* Dark brown */
-    --highlight-color: #003366; /* Blue */
+    --primary-color: #5D4037;
+    /* Dark brown */
+    --highlight-color: #003366;
+    /* Blue */
+    --highlight-color-light: #4a8dc8;
+    /* Lighter blue for better contrast */
+    --secondary-color: #d4a373;
+    /* Light brown for icons */
 }
 
 /* Global Styles */
@@ -16,17 +21,20 @@ body {
 }
 
 /* Shared font and color for headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
 }
 
-/* Moved uppercase styling here so card titles (h3) stay standard case */
-h1, h2 {
+/* Uppercase styling for major headings */
+h1,
+h2 {
     text-transform: uppercase;
 }
 
-/* Added extra breathing room below main section headings */
+/* Extra breathing room below main section headings */
 h2 {
     margin-bottom: 2rem;
 }
@@ -36,25 +44,22 @@ h2 {
 }
 
 /* Navbar Styles */
-#navbar{
+#navbar {
     background-color: var(--primary-color);
 }
-#navbar .logo{
+
+#navbar .logo {
     width: 30px;
 }
 
 /* Header Styles */
-#header .lead {
+header .lead {
     font-family: var(--secondary-font);
 }
 
 .section {
     margin-top: 2rem;
     margin-bottom: 2rem;
-}
-
-#home-header .lead {
-    font-family: var(--secondary-font, "Montserrat"), sans-serif;
 }
 
 .carousel {
@@ -67,52 +72,6 @@ h2 {
     max-height: 450px;
 }
 
-/* Services Section Styles */
-#services .card {
-    margin-bottom: 1.5rem; /* Prevents cards from smashing together when stacked on mobile */
-}
-
-#services .card-footer {
-    background-color: transparent; /* Removes default Bootstrap gray background */
-    font-weight: bold;             /* Emphasizes the price info */
-    color: var(--highlight-color); /* Turns the price blue to match your theme */
-}
-
-/* --- Services Card Height Adjustments --- */
-
-/* Tablet view (Provided in the video example) */
-
-@media (min-width: 768px) {
-    #services .card-body {
-        min-height: 191px;
-    }
-}
-
-/* Large screens (Provided in the video example) */
-@media (min-width: 992px) {
-    #services .card-body {
-        min-height: auto;
-    }
-}
-
-/* ⬇️ YOUR CHALLENGE SOLUTION TO ADD ⬇️ */
-
-/* Extra Large Screens */
-@media (min-width: 1200px) {
-    /* Sets the card body minimum height to 220px to align the footers */
-    #services .card-body {
-        min-height: 220px;
-    }
-}
-
-/* Extra Extra Large Screens */
-@media (min-width: 1400px) {
-    /* Sets the card body minimum height to 195px for the largest displays */
-    #services .card-body {
-        min-height: 195px;
-    }
-}
-
 /* --- Game Library Cards Styling --- */
 #new-games .card,
 #fav-games .card {
@@ -120,7 +79,6 @@ h2 {
 }
 
 /* Footer and Contact Section */
-
 #contact {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -141,10 +99,10 @@ h2 {
     color: var(--secondary-color);
     font-size: 1.2rem;
     margin-right: 15px;
-    width: 20px; /* Optional: keeps text cleanly aligned vertically */
+    width: 20px;
 }
 
-/* Distinct styling for social media icons */
+/* Styling for social media icons */
 #contact .social-links a {
     text-decoration: none;
     margin-right: 15px;
@@ -159,4 +117,12 @@ h2 {
 /* Smooth visual feedback on hover */
 #contact .social-links a:hover i {
     color: var(--secondary-color);
+}
+
+/* --- Footer Table Styling --- */
+
+/* Use the wildcard selector to force transparency on all table descendants */
+#contact .table-dark,
+#contact .table-dark * {
+    background-color: transparent !important;
 }
