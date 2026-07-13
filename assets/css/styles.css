@@ -15,10 +15,20 @@ body {
     font-family: var(--primary-font);
 }
 
+/* Shared font and color for headings */
 h1, h2, h3 {
     font-family: var(--secondary-font);
     color: var(--primary-color);
+}
+
+/* Moved uppercase styling here so card titles (h3) stay standard case */
+h1, h2 {
     text-transform: uppercase;
+}
+
+/* Added extra breathing room below main section headings */
+h2 {
+    margin-bottom: 2rem;
 }
 
 .sub-heading-color {
@@ -31,35 +41,81 @@ h1, h2, h3 {
 }
 #navbar .logo{
     width: 30px;
-
 }
 
 /* Header Styles */
 #header .lead {
     font-family: var(--secondary-font);
 }
-/* grid visualtization CSS for testing */
-/* .container, 
-.row {
-    border: 2px solid black;
-}
-
-.col-12{
-    border: 2px solid grey;
-    background-color: whitesmoke;
-} */
 
 .section {
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
-h1,
-h2,
-h3 {
-    text-transform: uppercase;
-}
-
 #home-header .lead {
     font-family: var(--secondary-font, "Montserrat"), sans-serif;
 }
+
+.carousel {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    max-height: 450px;
+}
+
+/* Services Section Styles */
+#services .card {
+    margin-bottom: 1.5rem; /* Prevents cards from smashing together when stacked on mobile */
+}
+
+#services .card-footer {
+    background-color: transparent; /* Removes default Bootstrap gray background */
+    font-weight: bold;             /* Emphasizes the price info */
+    color: var(--highlight-color); /* Turns the price blue to match your theme */
+}
+
+/* --- Services Card Height Adjustments --- */
+
+/* Tablet view (Provided in the video example) */
+
+@media (min-width: 768px) {
+    #services .card-body {
+        min-height: 191px;
+    }
+}
+
+/* Large screens (Provided in the video example) */
+@media (min-width: 992px) {
+    #services .card-body {
+        min-height: auto;
+    }
+}
+
+/* ⬇️ YOUR CHALLENGE SOLUTION TO ADD ⬇️ */
+
+/* Extra Large Screens */
+@media (min-width: 1200px) {
+    /* Sets the card body minimum height to 220px to align the footers */
+    #services .card-body {
+        min-height: 220px;
+    }
+}
+
+/* Extra Extra Large Screens */
+@media (min-width: 1400px) {
+    /* Sets the card body minimum height to 195px for the largest displays */
+    #services .card-body {
+        min-height: 195px;
+    }
+}
+
+/* --- Game Library Cards Styling --- */
+#new-games .card,
+#fav-games .card {
+    border: none;
+}
+
