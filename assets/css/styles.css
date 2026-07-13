@@ -119,3 +119,44 @@ h2 {
     border: none;
 }
 
+/* Footer and Contact Section */
+
+#contact {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding-bottom: 2rem;
+}
+
+#contact h2 {
+    color: #ffffff;
+}
+
+#contact .sub-heading-color {
+    color: var(--highlight-color-light) !important;
+}
+
+/* Base style for contact info icons */
+#contact address i,
+#contact p i {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+    margin-right: 15px;
+    width: 20px; /* Optional: keeps text cleanly aligned vertically */
+}
+
+/* Distinct styling for social media icons */
+#contact .social-links a {
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+#contact .social-links i {
+    color: var(--highlight-color-light);
+    font-size: 1.9rem;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Smooth visual feedback on hover */
+#contact .social-links a:hover i {
+    color: var(--secondary-color);
+}
