@@ -6,8 +6,10 @@
     --primary-font: 'Inter', sans-serif;
     --secondary-font: 'Macondo', cursive;
     --primary-color: #5D4037;
-    --highlight-color: #0d6efd; /* Bootstrap primary blue */
-    --highlight-color-dark: #0b5ed7; /* hover state */
+    --highlight-color: #0d6efd;
+    /* Bootstrap primary blue */
+    --highlight-color-dark: #0b5ed7;
+    /* hover state */
     --highlight-color-light: #4a8dc8;
     --secondary-color: #d4a373;
 }
@@ -49,6 +51,14 @@ h2 {
     width: 30px;
 }
 
+/* Force navbar buttons to match the text vertical alignment strictly */
+#navbar .btn.custom-button-filled {
+    padding: 0.375rem 0.75rem;
+    line-height: 1.5;
+    display: inline-flex;
+    align-items: center;
+}
+
 /* Header Styles */
 header .lead {
     font-family: var(--secondary-font);
@@ -67,19 +77,6 @@ header .lead {
 .carousel-item img {
     object-fit: cover;
     max-height: 450px;
-}
-
-/* Add these to assets/css/style.css */
-.custom-button-filled {
-    border: 1px solid var(--highlight-color);
-    background-color: var(--highlight-color);
-    color: white;
-}
-
-.custom-button-outline {
-    border: 1px solid var(--highlight-color);
-    background-color: transparent;
-    color: var(--highlight-color);
 }
 
 /* --- Game Library Cards Styling --- */
@@ -112,20 +109,20 @@ header .lead {
     width: 20px;
 }
 
-/* Styling for social media icons */
-#contact .social-links a {
+/* Styling for social media / contact icons */
+#contact .social-icons a {
     text-decoration: none;
     margin-right: 15px;
 }
 
-#contact .social-links i {
+#contact .social-icons i {
     color: var(--highlight-color-light);
     font-size: 1.9rem;
     transition: color 0.3s ease-in-out;
 }
 
 /* Smooth visual feedback on hover */
-#contact .social-links a:hover i {
+#contact .social-icons a:hover i {
     color: var(--secondary-color);
 }
 
@@ -180,7 +177,7 @@ header .lead {
 
 /* Events section */
 #events .table-responsive {
-    border: 1px solid rgba(255,255,255,0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 0.5rem;
 }
 
@@ -188,22 +185,6 @@ header .lead {
     margin-bottom: 0;
 }
 
-#events .table-hover tbody tr:hover > * {
-    background-color: rgba(255,255,255,0.12);
-}
-
-/* Social icons */
-#contact .social-icons a {
-    text-decoration: none;
-    margin-right: 15px;
-}
-
-#contact .social-icons i {
-    color: var(--highlight-color-light);
-    font-size: 1.9rem;
-    transition: color 0.3s ease-in-out;
-}
-
-#contact .social-icons a:hover i {
-    color: var(--secondary-color);
+#events .table-hover tbody tr:hover>* {
+    background-color: rgba(255, 255, 255, 0.12);
 }
